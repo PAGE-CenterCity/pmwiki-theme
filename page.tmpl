@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>$WikiTitle | {$Group} / {$Title} $ActionTitle</title>
+
+    <link rel='stylesheet' href='$SkinDirUrl/page.css' type='text/css' />
+
+  <link rel="shortcut icon"
+        href="http://www.pagegaming.com/art/page-die-favicon.png" />
+  <link rel="icon" type='image/png'
+        href="http://www.pagegaming.com/art/page-die-favicon.png" />
+
+    <!--HTMLHeader-->
+  </head>
+
+  <body>
+    <div id="centrebox">
+      <div id="leftcol">
+
+        <a href="/"><img id="side-banner-text"
+                         src="/art/page-side-banner.png"
+                         alt="Philadelphia Area Gaming Enthusiasts (PAGE)"/></a>
+        <div id="side-banner-strip">
+          <img src="/art/green-side-strip.png" alt="Oooh, pretty!" />
+        </div>
+      </div>
+
+      <div id="maincol">
+        <div id="greenunderlay">
+        </div>
+
+        <script>
+          if ("$Group" == "Main" && "$Title" == "HomePage" && "$Action" != "edit") {
+          document.write("<div style=\"text-align:center\"><img src=\"/art/page-top-logo.png\"/></div>");
+          }
+        </script>
+
+        <div id="navbox-container">
+          <div id="navbox">
+            <div id="navbox-menu">
+              <a href="/">PAGE</a>
+              <hr/>
+              <!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
+            </div>
+            <div id="navbox-facebook">
+              <a href="https://www.facebook.com/pagecentercity/"target="_blank"><img src="/art/FB-FindUsonFacebook-online-114.png" alt="Find Us On Facebook" title="Find Us On Facebook" /></a>
+            </div>
+          </div>
+                
+          <!--PageText-->
+
+          <img src="/art/orange-die.png"
+               alt="PAGE Center City"
+               id="orange-die" />
+        </div>
+
+        <script>
+          if ("$Action" == "edit") {
+          document.getElementById("navbox").style.display = "none";
+          }
+          if (("$Group" == "Main" && "$Title" == "HomePage") || "$Action" == "edit") {
+          document.getElementById("orange-die").style.display = "none";
+          }
+        </script>
+
+        <hr/>
+        <!--PageFooterFmt-->
+        <div id="modifiedbox">$[Last modified {$LastModified}]</div>
+        <div id="actionbox">
+          [ <a rel="nofollow" href='{$PageUrl}?action=edit'>$[edit]</a> -
+          <a rel="nofollow" href='{$PageUrl}?action=upload'>$[upload]</a> -
+          <a rel="nofollow" href='{$PageUrl}?action=diff'>$[history]</a> -
+          <a href='{$ScriptUrl}/$[{$Group}/RecentChanges]'>$[recent changes]</a> -
+          <a rel="nofollow" href='{$PageUrl}?action=print' target='_blank'>$[print]</a> -
+          <a href='{$ScriptUrl}/$[{$SiteGroup}/Search]'>$[search]</a>
+]
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23801699-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
